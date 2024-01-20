@@ -261,6 +261,7 @@
             color: #3c97bf;
             text-decoration: none;
         }
+
         #logo-center {
             display: block;
             margin: 20px auto; /* Adjust margin to center the logo horizontally */
@@ -275,23 +276,33 @@
             width: 10%;
             height:100px;
         }
+
+        /* Additional style for eye icon */
+        #eyeIcon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
     <img id="logo-center" src="VAULT.jpg" alt="Center Logo">
-    <img id="logo-left" src= "logo.jpg" alt="Left Logo">
+    <img id="logo-left" src="logo.jpg" alt="Left Logo">
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="#">
                 <h1>Create Account</h1>
                 <div class="social-container">
-                    <a href="https://www.facebook.com/login.php/" class="social"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/login.php/" class="social"><i class="fab fa-facebook-f"
+                            aria-hidden="true"></i></a>
                     <a href="https://myaccount.google.com/" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" id="newUsername" name="name" placeholder="Name" />
+                <input type="text" id="newUsername" name="name" placeholder="Username" />
                 <input type="email" id="newEmail" name="email" placeholder="Email" />
                 <input type="password" id="newPassword" name="password" placeholder="Password" />
                 <input type="text" id="confirmPassword" name="Confirm Password" placeholder="Confirm Password" />
@@ -308,7 +319,10 @@
                 </div>
                 <span>or use your account</span>
                 <input type="email" id="loginEmail" name="email" placeholder="Email" />
-                <input type="password" id="loginPassword" name="password" placeholder="Password" />
+                <div style="position: relative;">
+                    <input type="password" id="loginPassword" name="password" placeholder="Password" />
+                    <i id="eyeIcon" class="far fa-eye" onclick="togglePasswordVisibility()"></i>
+                </div>
                 <a href="#">Forgot your password?</a>
                 <button type="submit">Log in</button>
             </form>
@@ -328,7 +342,7 @@
             </div>
         </div>
     </div>
-       <script>
+    <script>
         const signUpButton = document.getElementById('signUp');
         const signInButton = document.getElementById('signIn');
         const container = document.getElementById('container');
@@ -340,32 +354,70 @@
         signInButton.addEventListener('click', () => {
             container.classList.remove('right-panel-active');
         });
+
         function register() {
             var newUsername = document.getElementById("newUsername").value;
             var newEmail = document.getElementById("newEmail").value;
             var newPassword = document.getElementById("newPassword").value;
             var confirmPassword = document.getElementById("confirmPassword").value;
 
-            if (newUsername && newEmail && newPassword && confirmPassword) {
-                if (newPassword === confirmPassword) {
-                    alert("Registration successful!");
-                } else {
-                    alert("Passwords do not match. Please enter the same password in both fields.");
-                }
-            } else {
+            if (!newUsername || !newEmail || !newPassword || !confirmPassword) {
                 alert("Please fill in all the fields.");
+                return;
             }
+
+            if (!validateEmail(newEmail)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (newPassword !== confirmPassword) {
+                alert("Passwords do not match. Please enter the same password in both fields.");
+                return;
+            }
+
+            alert("Registration successful!");
+        }
+
+        function validateEmail(email) {
+            // Regular expression for a valid email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
         }
 
         function validateLogin() {
             var loginEmail = document.getElementById("loginEmail").value;
             var loginPassword = document.getElementById("loginPassword").value;
 
-            if (loginEmail && loginPassword) {
-                return true} 
-            else {
+            if (!loginEmail || !loginPassword) {
                 alert("Please enter both email and password.");
-                return false; 
+                return false;
+            }
+
+            if (!validateEmail(loginEmail)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // You may add further checks or authentication here
+
+            // If everything is valid, return true
+            return true;
+        }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("loginPassword");
+            var eyeIcon = document.getElementById("eyeIcon");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+                setTimeout(() => {
+                    passwordInput.type = "password";
+                    eyeIcon.classList.remove("fa-eye-slash");
+                    eyeIcon.classList.add("fa-eye");
+                }, 1000);
             }
         }
     </script>
