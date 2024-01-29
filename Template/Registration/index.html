@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -289,11 +291,13 @@
 </head>
 
 <body>
-    <img id="logo-center" src="VAULT.jpg" alt="Center Logo">
-    <img id="logo-left" src="logo.jpg" alt="Left Logo">
+    {% block content %}
+        <img id="logo-center" src="{% static 'img\reg\VAULT.png' %}" alt="Center Logo">
+    <img id="logo-left" src="{% static 'img\reg\logo.jpg' %} " alt="Left Logo">
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="#">
+                {% csrf_token %}
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="https://www.facebook.com/login.php/" class="social"><i class="fab fa-facebook-f"
@@ -311,6 +315,7 @@
         </div>
         <div class="form-container sign-in-container">
             <form method="POST" action="#" onsubmit="return validateLogin()">
+                {% csrf_token %}
                 <h1>Log in</h1>
                 <div class="social-container">
                     <a href="https://www.facebook.com/login.php/" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -421,6 +426,7 @@
             }
         }
     </script>
+    {% endblock content %}
 </body>
 
 </html>
