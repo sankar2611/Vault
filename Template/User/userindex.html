@@ -46,10 +46,9 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" >
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="{% url 'userindex' %}" class="navbar-brand p-0">
-                    <h1 class="m-0"> VAULT <img src="{% static 'img/img_user/VAULT.png' %}" alt="Logo" ></h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                    <h1 class="m-0"> VAULT <img src="{% static 'img/img_user/VAULT.png' %}" alt="Logo"></h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -68,13 +67,18 @@
                             </div>
                         </div>
                         <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                        <a href="{% url 'index' %}" class="nav-item nav-link">Logout</a> <!-- Add this line for logout -->
                     </div>
                 </div>
             </nav>
+        
+            
+        </div>
 
             <div class="container-xxl bg-primary hero-header">
                 <div class="container">
                     <div class="row g-5 align-items-center">
+                        <h1 class="text-white animated zoomIn mb-3" style="text-align: center;">Home</h1>
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="text-white mb-4 animated zoomIn">Welcome to Your Vault <br> Where Every File Finds Its Place.</h1>
                             <p class="text-white pb-3 animated zoomIn">Your digital fortress for secure and organized storage. Safeguard your files with ease and access them anytime, anywhere. Experience the power of simplicity and security in one seamless application</p>
