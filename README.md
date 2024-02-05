@@ -1,8 +1,8 @@
 # Vault -  "Simplify. Store. Access. Your files, your command."
 ## GROUP - IV
-### SANKAR MURUGAN -23122031 (https://github.com/sankar2611)
-### BRITTO FERNANDES - 23122012 (https://github.com/Abin7717)
-### ABIN ROY - 23122002 (https://github.com/Britto69)
+### SANKAR MURUGAN -23122031 [https://github.com/sankar2611]
+### BRITTO FERNANDES - 23122012 [https://github.com/Abin7717]
+### ABIN ROY - 23122002 [https://github.com/Britto69]
 
 
 #### Vault is a comprehensive web application revolutionizing digital document management with a user-centric approach. At its core, Vault facilitates a seamless user experience, commencing with an effortless account creation process. Users can securely upload, organize, and manage their diverse digital documents, ranging from identification papers to academic certificates. The platform's Document Verification feature ensures the authenticity of uploaded documents, instilling trust in the integrity of the stored information.
