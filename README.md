@@ -15,24 +15,24 @@
 
 ## Admin: 
 #####     The Admin module provides administrators with comprehensive control over the platform, ensuring smooth operation, monitoring user activities, and addressing any issues promptly.
-##### Functionalities:
-#####                Vault prioritizes user satisfaction by incorporating a Complaint and Feedback module. Users can provide valuable insights, report issues, or seek assistance,  fostering a dynamic feedback loop for continuous improvement.
+### Functionalities:
+####                Vault prioritizes user satisfaction by incorporating a Complaint and Feedback module. Users can provide valuable insights, report issues, or seek assistance,  fostering a dynamic feedback loop for continuous improvement.
 
 
 ## User: 
 #####    The User Module in Vault is designed exclusively for individual account holders. It serves as the primary interface for users to manage their personal digital documents securely. This module facilitates essential actions such as account creation, document uploading, and provides avenues for users to engage with the system through feedback and complaints. Additionally, it governs the control and accessibility of documents, ensuring that users have direct influence over who can access their uploaded information. The User Module prioritizes simplicity and user-friendly interactions, aiming to provide a seamless and personalized experience for individuals leveraging the Vault platform.
 
-##### Functionalities:
-#####                Vault's versatile access controls cater to both direct and indirect access to uploaded documents. Users have the flexibility to share documents securely, streamlining collaboration while maintaining control over information accessibility.
-######    Vault offers a seamless account creation process, enabling users to establish their digital identity securely. This feature ensures a user-friendly onboarding experience, allowing individuals to access the platform effortlessly. 
-#####     Vault empowers users to upload and store important documents digitally. The platform ensures the privacy and security of uploaded documents, providing a virtual vault for users to manage and organize their crucial information conveniently.
+### Functionalities:
+####                Vault's versatile access controls cater to both direct and indirect access to uploaded documents. Users have the flexibility to share documents securely, streamlining collaboration while maintaining control over information accessibility.
+####    Vault offers a seamless account creation process, enabling users to establish their digital identity securely. This feature ensures a user-friendly onboarding experience, allowing individuals to access the platform effortlessly. 
+####     Vault empowers users to upload and store important documents digitally. The platform ensures the privacy and security of uploaded documents, providing a virtual vault for users to manage and organize their crucial information conveniently.
 
 
 
 ## Government User: 
 #####   Designed for government users, this module facilitates seamless interaction with citizen data. It ensures secure access to verified information, streamlining administrative processes and fostering efficient governance.
-##### Functionalities:
-#####                The Document Verification module serves as a crucial component, ensuring the authenticity of uploaded documents. This feature involves robust verification processes, enhancing the trustworthiness of the digital documents stored within Vault.
+### Functionalities:
+####                The Document Verification module serves as a crucial component, ensuring the authenticity of uploaded documents. This feature involves robust verification processes, enhancing the trustworthiness of the digital documents stored within Vault.
 
 
 
