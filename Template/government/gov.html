@@ -119,7 +119,7 @@
     {% block content %}
     <header>
         <img src="{% static 'img/government/iglogo.png' %}" alt="Your Logo">
-        <h1>Uploaded Documents</h1>
+        <h1>Government of India</h1>
     </header>
 
     <nav>
@@ -128,19 +128,21 @@
     </nav>
 
     <main>
-        <h2>Welcome to Your Website</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac odio nec ex eleifend luctus vel vel nisl. Maecenas vel justo nec orci semper venenatis vitae vel libero. In hac habitasse platea dictumst. Nullam non justo eu urna consectetur ultrices. Fusce sed elit justo. Sed dictum, neque eu rhoncus finibus, purus turpis bibendum libero, nec cursus libero nisl id justo.</p>
-        <p>Integer euismod, sapien nec tincidunt pulvinar, libero nisi luctus elit, ac laoreet elit arcu sit amet purus. Aliquam erat volutpat. Sed vitae erat vitae arcu suscipit efficitur vel ut velit. Nam in urna vel libero vestibulum venenatis non vel ligula. Praesent a ligula vel nulla volutpat semper vel eu elit.</p>
-        <button id="clickMeButton">Click me for a surprise!</button>
+        <h2>Welcome to Vault</h2>
+        <p>Vault is a key initiative under Digital India, Vault's flagship program aimed at transforming India into a digitally empowered society and knowledge economy. Vault ties into Digital India’s vision areas of providing citizens a secure document access platform on a public cloud.</p>
+
+        <p> Targeted at the idea of paperless governance, vault is a platform for issuance and verification of documents & certificates in a digital way, thus eliminating the use of physical documents. DigiLocker has helped in bringing paradigm shift towards paperless governance i.e. it helped citizens and departments to shift from paper based processes to paperless process thereby helping to contribute to Hon’ble Prime Minister’s vision of Digital India.</p>
+        <p></p>
+        <button id="clickMeButton">Click to logout</button>
     </main>
 
     <footer>
-        &copy; 2024 Your Website | All rights reserved
+        &copy; 2024 Vault | All rights reserved
     </footer>
 
     <script>
         document.getElementById("clickMeButton").addEventListener("click", function () {
-            alert("Surprise! You clicked the button!");
+            window.location.href = "{% url 'index' %}";
         });
     </script>
     {% endblock content %}
